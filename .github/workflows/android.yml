@@ -24,3 +24,15 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew assemble
+      
+    - name: Archive aar
+      uses: actions/upload-artifact@v2
+      with:
+        name: draftsman
+        path: draftsman/build/outputs/aar/**.aar  
+      
+    - name: Archive APK
+      uses: actions/upload-artifact@v2
+      with:
+        name: app
+        path: app/build/outputs/apk/**/**.apk
