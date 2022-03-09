@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi Folks" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="16dp"
+        android:text="Draftsman works like inspect element of browsers, or layout bounds with numbers" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtitle"
+        android:layout_marginTop="16dp"
+        android:focusable="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Example text field" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/inputField"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardCornerRadius="8dp">
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radio" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Checkbox" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/enable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:text="Enable" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/disable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="Disable" />
+
+</RelativeLayout>

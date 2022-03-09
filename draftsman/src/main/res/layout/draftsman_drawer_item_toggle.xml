@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@drawable/draftsman_drawer_item_bg"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp">
+
+    <ImageView
+        android:id="@+id/drawer_item_toggle_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/drawer_item_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/drawer_item_toggle_label"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/drawer_item_toggle"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_vertical"
+        android:textColor="#F8F8F9"
+        android:textSize="16sp"
+        android:layout_toRightOf="@id/drawer_item_toggle_icon"
+        android:layout_marginLeft="16dp"
+        tools:text="Property" />
+
+</RelativeLayout>

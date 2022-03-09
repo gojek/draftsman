@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/draftsman_info_view_bg"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/close_layering_view"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/draftsman_ic_close" />
+
+        <TextView
+            android:id="@+id/nested_view_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/close_layering_view"
+            android:layout_marginTop="8dp"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <com.gojek.draftsman.internal.widgets.NestedViewBoundView
+            android:id="@+id/nested_view_bound_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/nested_view_text"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
