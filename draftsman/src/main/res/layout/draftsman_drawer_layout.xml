@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ss.anoop.modern.drawer.ModernDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.gojek.draftsman.internal.drawer.ModernDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/draftsman_drawer"
     android:layout_width="match_parent"
     android:layout_height="800dp"
     android:background="#20273F"
-    app:drawerOpenIcon="@drawable/draftsman_ic_drawer_open"
-    app:drawerCloseIcon="@drawable/draftsman_ic_drawer_close"
     android:paddingTop="24dp"
+    app:drawerCloseIcon="@drawable/draftsman_ic_drawer_close"
+    app:drawerOpenIcon="@drawable/draftsman_ic_drawer_open"
     app:peekDistance="0dp">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -18,4 +18,4 @@
         android:padding="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-</ss.anoop.modern.drawer.ModernDrawerLayout>
+</com.gojek.draftsman.internal.drawer.ModernDrawerLayout>

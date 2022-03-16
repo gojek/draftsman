@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./draftsman/art/logo.png" width=150 height=150/>
+<img src="./draftsman/art/logo.svg" width=150 height=150/>
 <br>
 <h1>Draftsman</h1>
 </div>
