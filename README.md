@@ -29,7 +29,17 @@ The primary objective of Draftsman is to provide information around rendered vie
 Check usage guide at bottom for more details.
 
 ## Integration
-*WIP*
+Add following code to your build.gradle
+
+```groovy
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation "com.gojek.draftsman:draftsman:0.0.1"
+}
+```
 
 To enable Draftsman in an activity
 
