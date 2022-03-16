@@ -29,6 +29,8 @@ The primary objective of Draftsman is to provide information around rendered vie
 Check usage guide at bottom for more details.
 
 ## Integration
+[![Maven Central](https://img.shields.io/maven-central/v/com.gojek.draftsman/draftsman.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.gojek.draftsman%22%20AND%20a:%22draftsman%22)
+
 Add following code to your build.gradle
 
 ```groovy
@@ -37,7 +39,7 @@ repositories {
 }
 
 dependencies {
-  implementation "com.gojek.draftsman:draftsman:0.0.1"
+  implementation "com.gojek.draftsman:draftsman:x.y.z"
 }
 ```
 
