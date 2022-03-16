@@ -1,7 +1,6 @@
 plugins {
     id("com.android.library")
     kotlin("android")
-    `maven-publish`
 }
 
 android {
@@ -23,33 +22,10 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.1.0")
 }
 
-val sourcesJar by tasks.creating(Jar::class) {
-    archiveClassifier.set("sources")
-    from(android.sourceSets["main"].java.toString())
+ext {
+    set("PUBLISH_GROUP_ID", "com.gojek")
+    set("PUBLISH_VERSION", "0.0.1")
+    set("PUBLISH_ARTIFACT_ID", "draftsman")
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("draftsman") {
-            groupId = "com.gojek.draftsman"
-            artifactId = "draftsman"
-            version = rootProject.extra["versionName"] as String
-            // Tell maven to prepare the generated "*.aar" file for publishing
-            artifact(sourcesJar)
-            artifact("$buildDir/outputs/aar/${project.name}-release.aar")
-            pom {
-                withXml {
-                    asNode().appendNode("dependencies").let {
-                        for (dependency in configurations["implementation"].dependencies) {
-                            it.appendNode("dependency").apply {
-                                appendNode("groupId", dependency.group)
-                                appendNode("artifactId", dependency.name)
-                                appendNode("version", dependency.version)
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+apply(from = "${rootProject.projectDir}/scripts/publish-module.gradle")
