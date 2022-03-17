@@ -42,11 +42,11 @@ afterEvaluate {
                 pom {
                     name = PUBLISH_ARTIFACT_ID
                     description = 'Draftsman'
-                    url = 'https://github.com/gojekfarm/draftsman'
+                    url = 'https://github.com/gojek/draftsman'
                     licenses {
                         license {
                             name = 'Draftsman License'
-                            url = 'https://github.com/gojekfarm/draftsman/blob/main/LICENSE'
+                            url = 'https://github.com/gojek/draftsman/blob/main/LICENSE'
                         }
                     }
                     developers {
@@ -57,9 +57,9 @@ afterEvaluate {
                         }
                     }
                     scm {
-                        connection = 'scm:git:github.com/gojekfarm/draftsman.git'
-                        developerConnection = 'scm:git:ssh://github.com/gojekfarm/draftsman.git'
-                        url = 'https://github.com/gojekfarm/draftsman/tree/main'
+                        connection = 'scm:git:github.com/gojek/draftsman.git'
+                        developerConnection = 'scm:git:ssh://github.com/gojek/draftsman.git'
+                        url = 'https://github.com/gojek/draftsman/tree/main'
                     }
                 }
             }
