@@ -1,10 +1,12 @@
 name: Publish
 
 on:
-  workflow_run:
-    workflows: ["Releases"]
-    types:
-      - completed
+  push:
+    # Sequence of patterns matched against refs/tags
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+' # Push events to any matching semantic tag. For example, 1.10.1 or 2.0.0.
+        # For more details, see https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
+        # and https://docs.npmjs.com/about-semantic-versioning
 
 jobs:
   publish:
