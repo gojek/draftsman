@@ -24,7 +24,7 @@ dependencies {
 
 ext {
     set("PUBLISH_GROUP_ID", "com.gojek.draftsman")
-    set("PUBLISH_VERSION", "0.0.1")
+    set("PUBLISH_VERSION", "0.0.3")
     set("PUBLISH_ARTIFACT_ID", "draftsman")
 }
 
