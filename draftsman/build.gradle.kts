@@ -8,8 +8,6 @@ android {
     defaultConfig {
         minSdkVersion(21)
         targetSdkVersion(29)
-        versionCode = rootProject.extra["versionCode"] as Int
-        versionName = rootProject.extra["versionName"] as String
     }
 
     sourceSets["main"].java.srcDirs(
@@ -17,7 +15,7 @@ android {
     )
 }
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.71")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.31")
     implementation("androidx.appcompat:appcompat:1.1.0")
     implementation("androidx.recyclerview:recyclerview:1.1.0")
 }
