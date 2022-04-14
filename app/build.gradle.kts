@@ -19,5 +19,6 @@ dependencies {
     implementation("androidx.core:core-ktx:1.5.0")
     implementation("androidx.appcompat:appcompat:1.1.0")
     implementation("com.google.android.material:material:1.1.0")
-    implementation(project(":draftsman"))
+    debugImplementation(project(":draftsman"))
+    releaseImplementation(project(":draftsman-no-op"))
 }
