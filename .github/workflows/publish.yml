@@ -21,7 +21,7 @@ jobs:
           distribution: 'temurin'
           cache: gradle
       - name: Release build
-        run: ./gradlew draftsman:assembleRelease
+        run: ./gradlew :draftsman:assembleRelease :draftsman-no-op:assembleRelease
       - name: Publish to MavenCentral
         run: ./gradlew draftsman:publishReleasePublicationToSonatypeRepository --max-workers 1 closeAndReleaseSonatypeStagingRepository
         env:
